@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+body::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  //margin-right: -0.25em;
+}
+
+.popup {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(255,255,255,.2);
+  position: relative;
+  color: white;
+  font-family: 'Roboto';
+  margin-top: -100px;
+  transition: .5s;
+}
+
+.popup input[type="checkbox"]:not(:checked) ~ .contentArea .left .left-ar {
+  opacity: 0;
+}
+
+.popup .contentArea {
+  height: 100%;
+  background-color: rgba(255,255,255,.2);
+  padding: 75px 20px;
+  text-align: center;
+}
+
+.popup .contentArea .right, .popup .contentArea .left {
+  display: block;
+  height: 100%;
+  display: inline-block;
+  border: 0px solid rgba(255,255,255,.5);
+  position: relative;
+  vertical-align: top;
+}
+
+.popup input[type="checkbox"]:not(:checked) ~ .contentArea .left {
+  width: 0%;
+}
+
+.popup input[type="checkbox"]:not(:checked) ~ .contentArea .right {
+  width: 500px;
+  max-width: 100%
+}
+
+.popup .contentArea .left {
+  width: 40%;
+}
+
+.popup .contentArea .left .left-ar {
+  position: absolute;
+  right: 20px;
+  width: 120px;
+  height: 100%;
+}
+
+.popup .contentArea .right {
+  border-left-width: 2px;
+  width: 60%;
+  text-align: left;
+}
+
+.popup .contentArea .right::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  //margin-right: -0.25em;
+}
+
+.popup .contentArea .right .right-am {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: -50px;
+}
+
+.popup h2, .popup h3 {
+  font-family: 'Roboto';
+  font-weight: 100;
+  margin: 0;
+}
+
+.popup h3 {
+  font-size: 5em;
+}
+
+.popup h2 {
+  font-size: 2em;
+}
+
+.popup .buttonArea {
+  background-color: rgba(255,255,255,.2);
+  text-align: center;
+  overflow: hidden;
+  max-height: 100px;
+  transition: .5s;
+  opacity: 1;
+}
+
+.popup .buttonArea:empty {
+  max-height: 0;
+  opacity: 0;
+}
+
+.popup .buttonArea button {
+  border: 2px solid rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.2);
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 1em;
+  margin: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup .buttonArea button:active {
+  background-color: rgba(255,255,255,.4);
+}
+
+.s {
+  font-size: .8em;
+}
+
+.profile {
+  position: fixed;
+  background-color: rgba(255,255,255,.4);
+  color: white;
+  top: 10px;
+  left: 10px;
+  transition: .5s;
+}
+
+.profile img, .profile span {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.profile img {
+  height: 32px;
+}
+
+.profile span {
+  font-family: "Roboto";
+  font-size: 1.5em;
+}
+
+.settings:hover {
+  right: 10px;
+}
+
+.settings {
+  position: absolute;
+  top: 47px;
+  right: -200px;
+  width: 200px;
+  transition: .5s;
+  color: white;
+  text-align: left;
+  background-color: rgba(255,255,255,.4);
+  padding: 5px;
+  z-index: 1;
+}
+
+.settings::before {
+  content: "\2699";
+  color: white;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  font-size: 21px;
+  background: rgba(255,255,255,.4);
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  padding-bottom: 3px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.settings::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  height: 5px;
+  width: 32px;
+}
+
+.settings label {
+  display: block;
+  background-color: rgba(0,255,0,.2);
+  padding: 5px;
+}
+
+.settings .padder {
+  padding: 5px;
+}
+
+.stream {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+@media (min-width: 650px) {
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,.6);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.22) inset;
+  }
+
+}
+
+.card {
+  position: relative;
+  max-width: 600px;
+  background-color: rgba(255,255,255,.4);
+  padding: 10px;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 650px) {
+  .popup .contentArea {
+    padding: 50px 10px;
+  }
+  .popup input[type="checkbox"]:not(:checked) ~ .contentArea .right {
+    width: 220px;
+  }
+  .popup h2 {
+    font-size: .8em;
+  }
+  .popup h3 {
+    font-size: 2em;
+  }
+  .popup .contentArea .right .right-am {
+    margin-left: 10px;
+  }
+  .popup .contentArea .left .left-ar {
+    right: 10px;
+    width: 60px;
+  }
+  .popup .contentArea .right {
+    width: 65%;
+  }
+  .popup .contentArea .left {
+    width: 35%;
+  }
+}

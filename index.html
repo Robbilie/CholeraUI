@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>#therealsphere</title>
+		<script type="text/javascript" src="./js/libs.js"></script>
+		<script type="text/javascript" src="./js/bg.js"></script>
+		<script type="text/javascript" src="./js/xEl.js"></script>
+		<script type="text/javascript" src="./js/Renderer.js"></script>
+		<script type="text/javascript" src="./js/RealSphere.js"></script>
+		<script type="text/javascript">
+			const renderer = new Renderer();
+		</script>
+		<!-- INSERT CUSTOM TYPE RENDERERS HERE -->
+		<!-- ################################# -->
+		<script type="text/javascript" src="./js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/bg.css">
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-80348416-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="particles-background" class="vertical-centered-box"></div>
+		<div id="particles-foreground" class="vertical-centered-box"></div>
+	</body>
+</html>

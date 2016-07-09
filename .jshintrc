@@ -1,0 +1,17 @@
+{
+	"esversion": 		6,
+	"indent": 			1,
+	"node": 			true,
+	"globals": {
+		"escape":		true,
+		"unescape":		true,
+		"$":			true,
+		"$$":			true,
+		"xEl":			true,
+		"WebSocket":	true,
+		"window":		true,
+		"document":		true,
+		"gc": 			true,
+		"__base": 		true
+	}
+}
