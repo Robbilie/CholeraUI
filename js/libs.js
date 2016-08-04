@@ -19,7 +19,7 @@ function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.reque
 
 // helper
 
-window.$ = (id, el) => { let r = (el || document).querySelectorAll(id); if(r.length > 1) return r; else r[0]; };
+window.$ = (id, el) => { let r = (el || document).querySelectorAll(id); if(r.length > 1) return r; else return r[0]; };
 
 // extendings and plyfills
 
